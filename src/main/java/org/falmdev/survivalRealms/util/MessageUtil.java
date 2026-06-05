@@ -12,10 +12,11 @@ public final class MessageUtil {
     }
 
     public static Component component(String msg) {
-        return LegacyComponentSerializer.legacyAmpersand().deserialize(msg);
+        return LegacyComponentSerializer.legacyAmpersand().deserialize(msg == null ? "" : msg);
     }
 
     public static String replace(String msg, String key, String value) {
+        if (msg == null) return "";
         return msg.replace("{" + key + "}", value);
     }
 }
