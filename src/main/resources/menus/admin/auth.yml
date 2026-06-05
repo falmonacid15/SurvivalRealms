@@ -1,0 +1,63 @@
+name: "§8§lAdmin §7— §cAuth"
+size: 54
+layout: default
+parent: "admin/main"
+
+items:
+  auth-spawn:
+    slot: 10
+    material: MAGMA_CREAM
+    name: "§e§lAuth Spawn"
+    lore:
+      - "§7Estado: %sr_auth_spawn_status%"
+      - "§7Coords: %sr_auth_spawn_x%, %sr_auth_spawn_y%, %sr_auth_spawn_z%"
+      - ""
+      - "§7Click para setear tu"
+      - "§7posición actual."
+    action: SET_AUTH_SPAWN
+
+  main-spawn:
+    slot: 11
+    material: SLIME_BALL
+    name: "§a§lMain Spawn"
+    lore:
+      - "§7Estado: %sr_main_spawn_status%"
+      - "§7Coords: %sr_main_spawn_x%, %sr_main_spawn_y%, %sr_main_spawn_z%"
+      - ""
+      - "§7Click para setear tu"
+      - "§7posición actual."
+    action: SET_MAIN_SPAWN
+
+  info:
+    slot: 12
+    material: SPYGLASS
+    name: "§b§lInformación"
+    lore:
+      - "§7Timeout:      §f%sr_auth_timeout%s"
+      - "§7Max intentos: §f%sr_auth_max_attempts%"
+      - "§7Pass length:  §f%sr_auth_min_pass% - %sr_auth_max_pass%"
+      - ""
+      - "§8Edita config.yml para cambiar."
+    action: NONE
+
+  reload:
+    slot: 13
+    material: COMPARATOR
+    name: "§6§lRecargar config"
+    lore:
+      - "§7Recarga el config.yml"
+      - "§7sin reiniciar el servidor."
+      - ""
+      - "§eClick para recargar."
+    action: RELOAD_CONFIG
+
+  users:
+    slot: 14
+    material: PLAYER_HEAD
+    name: "§d§lUsuarios"
+    lore:
+      - "§7Ver y gestionar todos"
+      - "§7los usuarios registrados."
+      - ""
+      - "§eClick para abrir."
+    action: OPEN_USER_LIST

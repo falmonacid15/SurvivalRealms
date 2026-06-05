@@ -1,0 +1,15 @@
+name: "§8§l✦ §bWarps"
+size: 54
+layout: default
+paginated: true
+
+paginated-item:
+  material: "{warp_icon}"
+  name: "§e§l{warp_name}"
+  lore:
+    - "§7Mundo: §f{warp_world}"
+    - "§7Pos: §f{warp_x}, {warp_y}, {warp_z}"
+    - ""
+    - "§aClick para teletransportarse."
+  action: WARP_TELEPORT
+  action-data: "{warp_id}"

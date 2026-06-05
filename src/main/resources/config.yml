@@ -1,0 +1,81 @@
+database:
+  type: sqlite        # sqlite | mysql | postgresql
+
+  sqlite:
+    file: "survivalrealms.db"
+
+  mysql:
+    host: "localhost"
+    port: 3306
+    database: "survivalrealms"
+    username: "root"
+    password: "password"
+    pool-size: 10
+
+  postgresql:
+    host: "localhost"
+    port: 5432
+    database: "survivalrealms"
+    username: "postgres"
+    password: "password"
+    pool-size: 10
+
+auth:
+  login-timeout: 60
+  max-attempts: 5
+  min-password-length: 6
+  max-password-length: 32
+
+# Spawn donde el jugador espera para autenticarse (/register o /login)
+auth-spawn:
+  world: "world"
+  x: 0.5
+  y: 64.0
+  z: 0.5
+  yaw: 0.0
+  pitch: 0.0
+
+# Spawn principal al que van los jugadores nuevos tras registrarse
+main-spawn:
+  world: "world"
+  x: 0.5
+  y: 64.0
+  z: 0.5
+  yaw: 0.0
+  pitch: 0.0
+
+permissions:
+  # Grupo que se asigna a jugadores nuevos al registrarse
+  default-group: "default"
+  # Grupo de administradores
+  admin-group: "admin"
+
+warps:
+  limits:
+    default: 3          # grupo default puede ver/usar 3 warps
+    vip: 10
+    admin: -1           # -1 = sin límite
+  default-limit: 3      # fallback si el grupo no está en la lista
+
+messages:
+  prefix: "&8[&6SR&8] "
+  not-registered: "&cNo estás registrado. Usa &f/register <contraseña> <contraseña>"
+  already-registered: "&cYa tienes una cuenta registrada."
+  register-success: "&aRegistro exitoso. Usa &f/login <contraseña> &apara entrar."
+  register-mismatch: "&cLas contraseñas no coinciden."
+  register-too-short: "&cLa contraseña debe tener al menos {min} caracteres."
+  register-too-long: "&cLa contraseña no puede tener más de {max} caracteres."
+  not-logged-in: "&cDebes iniciar sesión. Usa &f/login <contraseña>"
+  already-logged-in: "&aYa estás autenticado."
+  login-success: "&a¡Bienvenido de vuelta, &f{player}&a!"
+  login-wrong: "&cContraseña incorrecta. Intentos restantes: &f{attempts}"
+  login-kicked-attempts: "&cDemasiados intentos fallidos."
+  login-timeout: "&cTiempo de autenticación agotado."
+  usage-register: "&cUso: /register <contraseña> <contraseña>"
+  usage-login: "&cUso: /login <contraseña>"
+  no-permission: "&cNo tienes permiso para esto."
+  auth-spawn-not-set: "&cEl spawn de autenticación no está configurado."
+  main-spawn-not-set: "&cEl spawn principal no está configurado."
+  auth-spawn-set: "&aSpawn de autenticación establecido."
+  main-spawn-set: "&aSpawn principal establecido."
+  reload-success: "&aConfiguración recargada."

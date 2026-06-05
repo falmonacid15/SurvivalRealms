@@ -1,0 +1,16 @@
+name: "§8§lAdmin §7— §6Panel principal"
+size: 54
+layout: default
+
+items:
+  auth-module:
+    slot: 10
+    material: BARRIER
+    name: "§c§lAuth"
+    lore:
+      - "§7Gestionar spawns,"
+      - "§7timeouts y configuración."
+      - ""
+      - "§eClick para abrir."
+    action: OPEN_MENU
+    action-data: "admin/auth"

@@ -1,0 +1,50 @@
+name: SurvivalRealms
+version: '${version}'
+
+main: org.falmdev.survivalRealms.SurvivalRealms
+api-version: '1.21.11'
+load: POSTWORLD
+description: Auth plugin para servidores offline-mode
+
+depend: [LuckPerms]
+softdepend: ["PlaceholderAPI"]
+
+commands:
+  sr:
+    description: Comando principal de SurvivalRealms
+    usage: /sr <subcomando>
+    aliases: [ survivalrealms ]
+  register:
+    description: Registra tu cuenta con una contraseña
+    usage: /register <contraseña> <contraseña>
+    aliases: [reg]
+  login:
+    description: Inicia sesión con tu contraseña
+    usage: /login <contraseña>
+    aliases: [l, log]
+
+permissions:
+  survivalrealms.admin:
+    description: Acceso a todos los comandos de administración
+    default: op
+    children:
+      survivalrealms.command.setauthspawn: true
+      survivalrealms.command.setmainspawn: true
+      survivalrealms.command.reload: true
+      survivalrealms.command.info: true
+      survivalrealms.command.gui: true
+  survivalrealms.command.gui:
+    description: Abre el panel de administración
+    default: op
+  survivalrealms.command.setauthspawn:
+    description: Permite setear el spawn de autenticación
+    default: op
+  survivalrealms.command.setmainspawn:
+    description: Permite setear el spawn principal
+    default: op
+  survivalrealms.command.reload:
+    description: Permite recargar la configuración
+    default: op
+  survivalrealms.command.info:
+    description: Permite ver información del plugin
+    default: op
