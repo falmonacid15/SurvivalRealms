@@ -57,6 +57,23 @@ warps:
     admin: -1           # -1 = sin límite
   default-limit: 3      # fallback si el grupo no está en la lista
 
+economy:
+  starting-balance: 0.0
+  currency-symbol: "$"
+  rewards:
+    kill-player: 50.0
+    kill-mob: 5.0
+
+teams:
+  max-members: 20
+  max-name-length: 20
+  bank-max-balance: 1000000.0
+
+claims:
+  max-chunks-per-player: 5   # multiplicador base
+  chunk-cost: 100.0          # costo por chunk del banco del equipo
+  max-total-chunks: 50       # tope global por equipo
+
 messages:
   prefix: "&8[&6SR&8] "
   not-registered: "&cNo estás registrado. Usa &f/register <contraseña> <contraseña>"

@@ -14,3 +14,37 @@ items:
       - "§eClick para abrir."
     action: OPEN_MENU
     action-data: "admin/auth"
+
+  users-module:
+    slot: 12
+    material: PLAYER_HEAD
+    name: "§d§lUsuarios"
+    lore:
+      - "§7Ver y gestionar todos"
+      - "§7los usuarios registrados."
+      - ""
+      - "§eClick para abrir."
+    action: OPEN_USER_LIST
+
+  world-module:
+    slot: 14
+    material: GRASS_BLOCK
+    name: "§a§lMundo"
+    lore:
+      - "§7Gestionar gamerules,"
+      - "§7tiempo, clima y más."
+      - ""
+      - "§eClick para abrir."
+    action: OPEN_WORLD_GUI
+
+  warps-module:
+    slot: 16
+    material: ENDER_PEARL
+    name: "§b§lWarps"
+    lore:
+      - "§7Ver y gestionar"
+      - "§7todos los warps."
+      - ""
+      - "§eClick para abrir."
+    action: OPEN_MENU
+    action-data: "warps"
